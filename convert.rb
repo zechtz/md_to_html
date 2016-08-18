@@ -1,6 +1,6 @@
 require "rdiscount"
 
-def main
+def convert  
   paths.each do |path|
     content =  File.read(path)
     page    =  Page.new(path, content)
@@ -13,7 +13,6 @@ def paths
 end
 
 class Page 
-
   attr_reader :path, :content 
 
   def initialize(path, content)
@@ -30,4 +29,5 @@ class Page
   end
 end 
 
-main 
+# Run the main method 
+convert  
