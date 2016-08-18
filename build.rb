@@ -1,4 +1,6 @@
+require 'rdiscount'
 def main
+  paths = Dir["*.md"]
   paths.each do |path|
     content = File.read(path)
     compiled = RDiscount.new(content).to_html 
