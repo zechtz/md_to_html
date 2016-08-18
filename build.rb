@@ -1,5 +1,7 @@
 def main
-  read
-  compile
-  write 
+  paths.each do |path|
+    read
+    compile
+    write 
+  end
 end
