@@ -1,4 +1,4 @@
-require 'rdiscount'
+require "rdiscount"
 def main
   paths = Dir["*.md"]
   paths.each do |path|
@@ -8,3 +8,5 @@ def main
     File.write(new_path, compiled)
   end
 end
+
+main 
